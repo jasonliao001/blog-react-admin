@@ -20,6 +20,8 @@ npm start
 - Gulp --合并国际化词条
 - Restify --Mock 服务器
 
+## 目录结构
+
 ## Solved Problems
 
 - React、Redux、React-Router-V4 等整合

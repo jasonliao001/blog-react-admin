@@ -2,41 +2,54 @@
   {
     "icon": "home",
     "key": "overview",
-    "label": "用户",
-    "url": "/home/overview"
+    "label": "用户管理",
+    "url": "/home/useradmin"
   },
+
   {
     "icon": "fork",
     "key": "topo",
-    "label": "文章",
-    "url": "/home/topo"
-  },
-  {
-    "icon": "area-chart",
-    "key": "sub-res",
-    "label": "一级菜单",
-    "children": [
-      {
-        "key": "rrs",
-        "label": "二级菜单001",
-        "url": "/home/rrs"
-      },
-      {
-        "key": "hms",
-        "label": "二级菜单002",
-        "url": "/home/hms"
-      },
-      {
-        "key": "mm",
-        "label": "二级菜单003",
-        "url": "/home/mm"
-      }
-    ]
+    "label": "分类",
+    "url": "/home/categories"
   },
   {
     "icon": "setting",
     "key": "setting",
-    "label": "设置",
-    "url": "/home/setting"
+    "label": "标签",
+    "url": "/home/tags"
+  },
+  {
+    "icon": "area-chart",
+    "key": "archives",
+    "label": "文章",
+    "children": [
+      {
+        "key": "rrs",
+        "label": "文章列表",
+        "url": "/home/archives"
+      },
+      {
+        "key": "hms",
+        "label": "文章创作",
+        "url": "/home/archives"
+      }
+    ]
+  },
+  {
+    "icon": "area-chart",
+    "key": "account",
+    "label": "个人页",
+    "children": [
+      {
+        "key": "accountcenter",
+        "label": "个人中心",
+        "url": "/home/accountcenter"
+      },
+      {
+        "key": "accountsetting",
+        "label": "个人设置",
+        "url": "/home/accountsetting"
+      }
+    ]
   }
 ]
