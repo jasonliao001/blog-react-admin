@@ -3,10 +3,11 @@ import thunk from 'redux-thunk';
 import { routerReducer } from 'react-router-redux';
 import resetEnhancer from './enhancer/reset.js';
 import { reducer as loadingReducer } from './components/loading';
-
+import { reducer as userAdminReducer } from './pages/useradmin';
 const originalReducers = {
   loading: loadingReducer,
-  routing: routerReducer
+  routing: routerReducer,
+  useradmin: userAdminReducer
 };
 const reducer = combineReducers(originalReducers);
 const win = window;
@@ -19,7 +20,7 @@ if (process.env.NODE_ENV !== 'production') {
 const storeEnhancers = compose(
   resetEnhancer,
   applyMiddleware(...middlewares),
-  (win && win.devToolsExtension) ? win.devToolsExtension() : (f) => f
+  win && win.devToolsExtension ? win.devToolsExtension() : f => f
 );
 
 const initialState = {};

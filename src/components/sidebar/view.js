@@ -12,10 +12,10 @@ const Sidebar = ({ collapsed }) => {
   return (
     <div className="ant-layout-sider-children">
       <div className={styles.logo}>
-        {/* <a href="/"> */}
-        <img src={logo} alt="logo" />
-        <h1>博客管理</h1>
-        {/* </a> */}
+        <a href="/">
+          <img src={logo} alt="logo" />
+          <h1>博客管理</h1>
+        </a>
       </div>
       <Menu theme="dark" onClick={e => setCurrent(e.key)} style={{ padding: '16px 0', width: '100%' }} defaultOpenKeys={['overview', 'sub-res', 'sub-other']} selectedKeys={[current]} mode="inline" inlineCollapsed={collapsed}>
         {data.map(item => {
