@@ -12,7 +12,7 @@ const Sidebar = ({ collapsed }) => {
   return (
     <div className="ant-layout-sider-children">
       <div className={styles.logo}>
-        <a href="/">
+        <a href="/blog-react-admin">
           <img src={logo} alt="logo" />
           <h1>博客管理</h1>
         </a>
