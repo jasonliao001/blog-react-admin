@@ -15,7 +15,7 @@ const put = (key, data) => {
   }
 };
 
-const get = (key) => {
+const get = key => {
   if (disable) {
     return undefined;
   }
@@ -29,7 +29,7 @@ const get = (key) => {
   }
 };
 
-const remove = (key) => {
+const remove = key => {
   if (disable) {
     return;
   }
@@ -49,4 +49,4 @@ const clear = () => {
   local.clear();
 };
 
-export {put, get, remove, clear};
+export { put, get, remove, clear };
