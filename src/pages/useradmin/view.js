@@ -30,9 +30,11 @@ const initialState = [];
 
 // table config
 
-// ModalFrom
+// 弹出modal中的form表单
 const ModalFormWrap = props => {
   const [modalformEnum] = useState(formEnumState);
+  const THeme = useContext(ThemeContext);
+  console.log('ModalFormWrap', THeme);
   const getFields = () => {
     const { getFieldDecorator } = props.form;
     const children = [];
@@ -52,7 +54,7 @@ const ModalFormWrap = props => {
   );
 };
 
-// modal components
+// 弹出modal 更改
 const ModalForm = Form.create({
   name: 'modal-form',
   onFieldsChange(props, changedFields) {
@@ -72,7 +74,7 @@ const ModalForm = Form.create({
     };
   }
 })(ModalFormWrap);
-// form components
+// 查询表单
 const SearchFormWrap = props => {
   const columns = [
     {
@@ -199,7 +201,6 @@ const SearchFormWrap = props => {
   };
   const handleModalFormReset = props => {
     // props.form.resetFields();
-    console.log(this);
   };
   const getFields = () => {
     const { getFieldDecorator } = props.form;
@@ -239,6 +240,8 @@ const SearchFormWrap = props => {
     </>
   );
 };
+
+// 查询表单
 const SearchForm = Form.create({
   name: 'useradmin-search',
   onFieldsChange(props, changedFields) {
@@ -256,10 +259,8 @@ const SearchForm = Form.create({
       })
     };
   }
-  // onValuesChange(_, values) {
-  //   console.log(values);
-  // }
 })(SearchFormWrap);
+const ThemeContext = React.createContext('light');
 //  user adminComponent
 const useradminComponent = props => {
   const [fields, setFields] = useState({
@@ -286,6 +287,7 @@ const useradminComponent = props => {
     </Card>
   );
 };
+
 const mapStateToProps = state => ({ tableData: state.useradmin });
 const mapDispatchToProps = (dispatch, props) => ({
   add: () => dispatch(AddRowData({ username: props.name })),

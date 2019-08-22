@@ -11,7 +11,6 @@ import store from './Store.js';
 import App from './App';
 import 'antd/dist/antd.css';
 import './assets/css/common.css';
-
 addLocaleData([...en, ...zh]);
 
 const userLang = navigator.language || '';

@@ -4,10 +4,13 @@ import { routerReducer } from 'react-router-redux';
 import resetEnhancer from './enhancer/reset.js';
 import { reducer as loadingReducer } from './components/loading';
 import { reducer as userAdminReducer } from './pages/useradmin';
+import { reducer as loginReducer } from './login';
+
 const originalReducers = {
   loading: loadingReducer,
   routing: routerReducer,
-  useradmin: userAdminReducer
+  useradmin: userAdminReducer,
+  login: loginReducer
 };
 const reducer = combineReducers(originalReducers);
 const win = window;

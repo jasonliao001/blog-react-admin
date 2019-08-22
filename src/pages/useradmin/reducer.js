@@ -13,7 +13,6 @@ export default (state = [], action) => {
         }
       ];
     case 'Update_RowData':
-      console.log('UpdateRowData');
       Object.assign(state[action.i], {
         username: action.username,
         phone: action.phone,
